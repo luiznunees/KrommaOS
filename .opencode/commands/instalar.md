@@ -1,1 +1,1 @@
-Use the skill "instalar" to run the initial KrommaOS setup. Follow the full installation workflow: pre-check, profile selection, interview questions, file population, summary, and next steps.
+Load the skill "instalar" and execute the full setup workflow. Run the pre-check, interview me about my business (one question at a time), fill the memory files (_memoria/empresa.md, preferencias.md, estrategia.md), apply the right profile template to CLAUDE.md, configure the visual identity in identidade/design-guide.md, and show a summary when done.

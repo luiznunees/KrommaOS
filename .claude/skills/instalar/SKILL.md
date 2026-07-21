@@ -95,8 +95,10 @@ Preencher com base nas perguntas 7-8. Estrutura:
 Se o usuário forneceu cores/fontes/logo (perguntas 9-10), preencher os campos correspondentes. Se não, deixar como está e avisar:
 > "Deixei o `identidade/design-guide.md` em branco. Sempre que você definir uma identidade visual, edita lá — as skills de carrossel, proposta e slide leem esse arquivo antes de criar qualquer visual."
 
-### `CLAUDE.md`
+### `CLAUDE.md` e `AGENTS.md`
 Pegar o template correspondente ao perfil escolhido na Fase 1 (`templates/perfis/claude-md-<perfil>.md`), adaptar com o nome do negócio e estrutura de pastas mencionada nas respostas, e sobrescrever o `CLAUDE.md` da raiz.
+
+Se existir `AGENTS.md` (usado pelo OpenCode), adicionar no final dele um bloco apontando pro `CLAUDE.md` como referência de contexto, para que o OpenCode também tenha acesso às regras específicas do perfil.
 
 ---
 

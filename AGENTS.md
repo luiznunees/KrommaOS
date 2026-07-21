@@ -6,6 +6,21 @@ Skills estão em `.claude/skills/` e comandos customizados em `.opencode/command
 
 ---
 
+## Setup inicial
+
+Se for o primeiro uso, execute o comando `instalar` (Ctrl+K) ou peça: "Roda o /instalar". O sistema vai te entrevistar e configurar automaticamente:
+
+1. Perfil do negócio (solopreneur, freelancer, agência ou empresa)
+2. Contexto da empresa em `_memoria/empresa.md`
+3. Tom de voz em `_memoria/preferencias.md`
+4. Foco atual em `_memoria/estrategia.md`
+5. Identidade visual em `identidade/design-guide.md`
+6. Template de `CLAUDE.md` conforme o perfil
+
+O `/instalar` roda uma vez só. Depois disso, é só usar.
+
+---
+
 ## Contexto do negócio
 
 No início de toda conversa, ler os seguintes arquivos (quando existirem e estiverem preenchidos):
