@@ -57,9 +57,11 @@ Ao concluir uma tarefa que não tinha skill mas parece repetível, perguntar: "I
 
 ---
 
-## Comandos customizados (Ctrl+K)
+## Comandos
 
-Use Ctrl+K para acessar comandos rápidos. Cada comando executa a skill correspondente.
+Quando o usuário disser "/instalar", "/abrir", "/carrossel" ou qualquer "/comando", carregue a skill correspondente em `.claude/skills/` usando a ferramenta `skill` e execute o workflow descrito nela.
+
+Comandos também estão disponíveis via Ctrl+K (atalho do OpenCode para comandos customizados em `.opencode/commands/`).
 
 ---
 

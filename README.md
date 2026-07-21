@@ -1,6 +1,6 @@
 # KrommaOS
 
-> O sistema operacional do seu negócio dentro do Claude Code **e** OpenCode.
+> O sistema operacional do seu negócio dentro do Claude Code e OpenCode.
 
 Você acaba de instalar o KrommaOS. Em alguns minutos, sua empresa vai
 ter uma memória própria, uma identidade visual aplicada em tudo que
@@ -15,34 +15,41 @@ Bora voar.
 
 ### Pelo OpenCode
 
+Abre o OpenCode em qualquer pasta e cola:
+
 ```
-git clone <repo-url> KrommaOS
-cd KrommaOS
-opencode
+Clona o https://github.com/luiznunees/KrommaOS.git na pasta atual,
+entra nela e roda o /instalar.
 ```
 
-Depois use `Ctrl+K` para acessar os comandos, ou peça diretamente pro agente.
+Ele clona, entra na pasta nova e dispara a entrevista de setup. Você
+só responde.
 
 ### Pelo Claude Code
 
-```
-git clone <repo-url> KrommaOS
-cd KrommaOS
-claude
-```
+Abre o Claude Code em qualquer pasta e cola:
 
-Depois rode `/instalar` para o setup inicial.
+```
+Clona o https://github.com/luiznunees/KrommaOS.git na pasta atual,
+entra nela e roda o /instalar.
+```
 
 ---
 
-Quando o setup terminar, renomeie a pasta pro nome do seu negócio.
+Quando o `/instalar` terminar, renomeia a pasta `KrommaOS/` pro nome do teu
+negócio (fecha o editor, renomeia no Explorer/Finder, abre de novo). A
+pasta não fica como "KrommaOS" — ela é o teu negócio agora.
+
+O `/instalar` roda uma vez só. Te entrevista sobre o negócio, monta a
+memória e configura o sistema. Depois disso, é só usar.
 
 ---
 
 ## O sistema
 
 **Núcleo**
-`/abrir` carrega o contexto · `/salvar` faz commit + push · `/atualizar` varre o projeto · `/novo-projeto` cria pasta isolada · `/mapear-rotinas` transforma rotinas em skills.
+`/abrir` carrega o contexto · `/salvar` faz commit + push · `/atualizar` varre o projeto ·
+`/novo-projeto` cria pasta isolada · `/mapear-rotinas` transforma rotinas em skills.
 
 **Conteúdo e SEO**
 `/carrossel` · `/publicar-tema` · `/seo` · `/responder-avaliacoes` · `/aprovar-post`
