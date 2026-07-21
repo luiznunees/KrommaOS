@@ -58,6 +58,7 @@ Antes de executar qualquer tarefa, verificar se existe skill relevante em `.clau
 - `proposta` — Gera proposta comercial com 3 opções de investimento
 - `criar-site` — Cria e publica site completo para cliente
 - `cliente-status` — Painel de todos os clientes ativos
+- `prospeccao` — Prepara mensagens de prospecção sem medo (lote personalizado)
 
 ### Conteúdo e Marketing
 - `carrossel` — Carrosséis e posts visuais
