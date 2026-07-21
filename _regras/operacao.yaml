@@ -1,0 +1,12 @@
+regras:
+  - escopo: "commits"
+    regra: "Mensagem de commit sempre em português, no imperativo"
+    severidade: "obrigatória"
+
+  - escopo: "commits"
+    regra: "Nunca dar git push sem antes mostrar o diff"
+    severidade: "obrigatória"
+
+  - escopo: "identidade visual"
+    regra: "Nunca usar a cor proibida definida em identidade/design-guide.md"
+    severidade: "obrigatória"

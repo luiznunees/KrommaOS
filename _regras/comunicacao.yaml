@@ -1,0 +1,12 @@
+regras:
+  - escopo: "emails para cliente"
+    regra: "Nunca enviar email sem antes mostrar pro usuário"
+    severidade: "obrigatória"
+
+  - escopo: "respostas de avaliação"
+    regra: "Avaliações de 3 estrelas ou menos: não responder sem aprovação do usuário"
+    severidade: "obrigatória"
+
+  - escopo: "conteúdo público"
+    regra: "Nunca mencionar valores ou preços em posts de Instagram"
+    severidade: "obrigatória"

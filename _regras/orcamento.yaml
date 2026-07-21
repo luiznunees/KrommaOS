@@ -1,0 +1,12 @@
+regras:
+  - escopo: "propostas e orçamentos"
+    regra: "Nunca sugerir valor abaixo de R$ 2.000"
+    severidade: "obrigatória"
+
+  - escopo: "propostas e orçamentos"
+    regra: "Sempre incluir 3 opções: básica, profissional, premium"
+    severidade: "obrigatória"
+
+  - escopo: "propostas e orçamentos"
+    regra: "Justificar cada opção com o que o cliente ganha"
+    severidade: "recomendada"

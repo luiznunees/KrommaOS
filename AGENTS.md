@@ -33,27 +33,50 @@ Usar essas informações como base pra qualquer resposta ou decisão. Para qualq
 
 ---
 
+## CLAs — Regras de negócio
+
+Antes de responder qualquer pergunta, ler os arquivos em `_regras/*.yaml`. As regras com severidade "obrigatória" devem ser seguidas rigorosamente. Conflitos entre regras e pedidos do usuário devem ser alertados antes de prosseguir.
+
+---
+
 ## Skills
 
-Antes de executar qualquer tarefa, verificar se existe skill relevante em `.claude/skills/` usando a ferramenta `skill`. Skills disponíveis:
+Antes de executar qualquer tarefa, verificar se existe skill relevante em `.claude/skills/` usando a ferramenta `skill`. Skills disponíveis (19 no total):
 
-- `abrir` — Abertura de sessão
-- `analisar-dados` — Análise de arquivos CSV/Excel/PDF
-- `anuncio-google` — Estrutura de campanha Google Ads
-- `aprovar-post` — Pipeline de aprovação e publicação
-- `atualizar` — Varredura e atualização de contexto
-- `carrossel` — Carrosséis e posts visuais
-- `email-profissional` — Rascunho de email
+### Núcleo
 - `instalar` — Instalação inicial do KrommaOS
-- `mapear-rotinas` — Mapeamento de tarefas repetitivas em skills
-- `novo-projeto` — Pasta de projeto novo com contexto dedicado
-- `publicar-tema` — Pipeline de conteúdo SEO + redes sociais
-- `relatorio-ads` — Relatório semanal de Google Ads + Meta Ads
-- `responder-avaliacoes` — Respostas para avaliações do Google
+- `abrir` — Abertura de sessão (carrega contexto)
+- `atualizar` — Varredura e atualização de contexto
 - `salvar` — Salvar no GitHub
+- `novo-projeto` — Pasta de projeto novo com contexto dedicado
+- `mapear-rotinas` — Mapeamento de tarefas repetitivas em skills
+- `go` — Executa múltiplas tarefas em sequência ou paralelo
+- `regras` — Gerencia regras de negócio (CLAs)
+
+### Conteúdo e Marketing
+- `carrossel` — Carrosséis e posts visuais
+- `publicar-tema` — Pipeline de conteúdo SEO + redes sociais
+- `aprovar-post` — Pipeline de aprovação e publicação
+- `responder-avaliacoes` — Respostas para avaliações do Google
+- `criar-marca` — Cria identidade visual (cores, fontes, logo)
+
+### SEO e Anúncios
 - `seo` — SEO completo + GEO + Google Ads
+- `anuncio-google` — Estrutura de campanha Google Ads
+- `relatorio-ads` — Relatório semanal de Google Ads + Meta Ads
+
+### Produção e Análise
+- `analisar-dados` — Análise de arquivos CSV/Excel/PDF
+- `email-profissional` — Rascunho de email
+- `dashboard` — Relatório semanal do que foi produzido
 
 Ao concluir uma tarefa que não tinha skill mas parece repetível, perguntar: "Isso pode virar uma skill pra próxima vez. Quer que eu crie?"
+
+---
+
+## Agentes especialistas (@mention)
+
+Use `@analista`, `@redator`, `@seo-especialista` ou `@designer` para invocar agentes especialistas. Eles têm permissões e modelos específicos para cada função.
 
 ---
 
@@ -103,9 +126,11 @@ Quando o usuário pedir skill nova:
 
 ```
 KrommaOS/
-  .claude/skills/        Skills do KrommaOS (lidas nativamente pelo OpenCode)
+  .claude/skills/        Skills (19 skills)
   .opencode/commands/    Comandos customizados (Ctrl+K)
+  .opencode/agents/      Agentes especialistas (@analista, @redator, etc)
   _memoria/              Cérebro do negócio
+  _regras/               CLAs — regras de negócio (YAML)
   identidade/            Identidade visual
   marketing/             Saídas de marketing
   scripts/               Scripts utilitários
