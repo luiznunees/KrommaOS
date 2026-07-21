@@ -1,7 +1,7 @@
-Ôªø# Identidade ‚Äî Ag√™ncia de Performance
+# Identidade ó AgÍncia de Performance
 
-> Identidade visual que rodou em cliente real do MazyOS ‚Äî ag√™ncia de
-> performance, tom direto, sem decora√ß√£o. Adapta a tua em `identidade/design-guide.md`.
+> Identidade visual que rodou em cliente real do KrommaOS ó agÍncia de
+> performance, tom direto, sem decoraÁ„o. Adapta a tua em `identidade/design-guide.md`.
 
 ---
 
@@ -11,21 +11,21 @@
 - **Cor de destaque / CTA:** #FF5C35
 - **Texto principal:** #F5F5F5
 - **Fundo alternativo / cards:** #1A1A1A
-- **Cor proibida:** verde-lim√£o, cores ne√≥n em geral
+- **Cor proibida:** verde-lim„o, cores neÛn em geral
 
 ---
 
 ## Tipografia
 
-- **T√≠tulos e destaques:** Syne (bold, weight 700-800)
-- **Corpo, subt√≠tulos e bot√µes:** DM Sans (weight 400-500)
-- **Peso do t√≠tulo:** extrabold
+- **TÌtulos e destaques:** Syne (bold, weight 700-800)
+- **Corpo, subtÌtulos e botıes:** DM Sans (weight 400-500)
+- **Peso do tÌtulo:** extrabold
 
 ---
 
 ## Estilo geral
 
-Dark e bold. Interface de ag√™ncia de performance: sem frescura, sem decora√ß√£o. Cada elemento tem uma fun√ß√£o. O laranja (#FF5C35) aparece s√≥ em CTAs e destaques cr√≠ticos.
+Dark e bold. Interface de agÍncia de performance: sem frescura, sem decoraÁ„o. Cada elemento tem uma funÁ„o. O laranja (#FF5C35) aparece sÛ em CTAs e destaques crÌticos.
 
 ---
 
@@ -33,8 +33,8 @@ Dark e bold. Interface de ag√™ncia de performance: sem frescura, sem decora√ß√£o
 
 - Bordas: solid 1px com opacidade baixa
 - Border-radius dos cards: 12px
-- Bot√µes: pill com border-radius: 50px, fundo laranja
-- Sombras: n√£o
+- Botıes: pill com border-radius: 50px, fundo laranja
+- Sombras: n„o
 
 ---
 
@@ -42,13 +42,13 @@ Dark e bold. Interface de ag√™ncia de performance: sem frescura, sem decora√ß√£o
 
 - Usar verde em qualquer tom
 - Cards com muito rounding (> 16px parece infantil no nosso posicionamento)
-- Gradiente como fundo de se√ß√£o inteira
+- Gradiente como fundo de seÁ„o inteira
 
 ---
 
 ## Logo
 
 - **Arquivo:** identidade/logo.svg
-- **Vers√£o pra fundo claro:** identidade/logo-dark.svg
-- **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresenta√ß√£o
+- **Vers„o pra fundo claro:** identidade/logo-dark.svg
+- **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentaÁ„o
 - **Tamanho sugerido:** largura entre 120-200px nos HTMLs

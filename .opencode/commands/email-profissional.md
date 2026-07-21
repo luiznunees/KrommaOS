@@ -1,0 +1,1 @@
+Use the skill "email-profissional" to draft a professional email. Collect context about recipient, objective, and specifics. Write with appropriate tone based on _memoria/preferencias.md and _memoria/empresa.md.

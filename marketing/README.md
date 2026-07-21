@@ -1,6 +1,6 @@
-# marketing/ — saídas do MazyOS
+# marketing/ — saídas do KrommaOS
 
-Tudo que as skills de marketing produzem cai aqui. Skills do MazyOS já sabem onde salvar — você raramente precisa criar pasta manualmente.
+Tudo que as skills de marketing produzem cai aqui. Skills do KrommaOS já sabem onde salvar — você raramente precisa criar pasta manualmente.
 
 ## Estrutura padrão
 

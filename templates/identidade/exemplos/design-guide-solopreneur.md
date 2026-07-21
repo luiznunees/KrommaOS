@@ -1,6 +1,6 @@
-Ôªø# Identidade ‚Äî Criador Solo
+# Identidade ó Criador Solo
 
-> Identidade visual que rodou em cliente real do MazyOS ‚Äî criador solo,
+> Identidade visual que rodou em cliente real do KrommaOS ó criador solo,
 > marca pessoal, audience-first. Adapta a tua em `identidade/design-guide.md`.
 
 ---
@@ -11,21 +11,21 @@
 - **Cor de destaque / CTA:** #C96442
 - **Texto principal:** #1C1917
 - **Fundo alternativo / cards:** #F3EFE8
-- **Cor proibida:** azul el√©trico, cores muito saturadas
+- **Cor proibida:** azul elÈtrico, cores muito saturadas
 
 ---
 
 ## Tipografia
 
-- **T√≠tulos e destaques:** Instrument Serif (italic, weight 400)
-- **Corpo, subt√≠tulos e bot√µes:** Bricolage Grotesque (weight 400-700)
-- **Peso do t√≠tulo:** regular italic (a leveza √© parte do estilo)
+- **TÌtulos e destaques:** Instrument Serif (italic, weight 400)
+- **Corpo, subtÌtulos e botıes:** Bricolage Grotesque (weight 400-700)
+- **Peso do tÌtulo:** regular italic (a leveza È parte do estilo)
 
 ---
 
 ## Estilo geral
 
-Quente, humano e editorial. Tons terrosos com fundo off-white. Parece um livro bonito ou um di√°rio de marca pessoal. O terracota (#C96442) aparece em CTAs, pills e destaques de texto.
+Quente, humano e editorial. Tons terrosos com fundo off-white. Parece um livro bonito ou um di·rio de marca pessoal. O terracota (#C96442) aparece em CTAs, pills e destaques de texto.
 
 ---
 
@@ -33,22 +33,22 @@ Quente, humano e editorial. Tons terrosos com fundo off-white. Parece um livro b
 
 - Bordas: dashed, arredondadas (border-radius: 20px)
 - Border-radius dos cards: 20px
-- Bot√µes: pill com border-radius: 50px, fundo terracota
+- Botıes: pill com border-radius: 50px, fundo terracota
 - Sombras: sutil (0 4px 20px rgba(0,0,0,0.06))
 
 ---
 
 ## O que NUNCA fazer
 
-- Fundo branco puro (#FFFFFF) ‚Äî usar sempre o off-white (#FAF7F2)
-- Bordas retas (solid sem radius) ‚Äî parece corpo e gen√©rico
-- Amarelo-lim√£o como acento ‚Äî destoa do tom quente
+- Fundo branco puro (#FFFFFF) ó usar sempre o off-white (#FAF7F2)
+- Bordas retas (solid sem radius) ó parece corpo e genÈrico
+- Amarelo-lim„o como acento ó destoa do tom quente
 
 ---
 
 ## Logo
 
 - **Arquivo:** identidade/logo.png
-- **Vers√£o pra fundo escuro:** identidade/logo-branco.png
-- **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresenta√ß√£o
+- **Vers„o pra fundo escuro:** identidade/logo-branco.png
+- **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentaÁ„o
 - **Tamanho sugerido:** largura entre 120-200px nos HTMLs

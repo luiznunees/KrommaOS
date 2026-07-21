@@ -1,56 +1,56 @@
-ï»¿---
+---
 name: atualizar
 description: >
   Varre o projeto e atualiza os arquivos de contexto (`_memoria/empresa.md`, `preferencias.md`,
-  `estrategia.md`, `CLAUDE.md`, `identidade/design-guide.md`) que ficaram desatualizados em relaÃ§Ã£o
-  ao estado real do workspace. Use quando o usuÃ¡rio disser "atualiza", "/atualizar", "varre o
-  projeto", ou pedir uma reconciliaÃ§Ã£o geral.
+  `estrategia.md`, `CLAUDE.md`, `identidade/design-guide.md`) que ficaram desatualizados em relação
+  ao estado real do workspace. Use quando o usuário disser "atualiza", "/atualizar", "varre o
+  projeto", ou pedir uma reconciliação geral.
 ---
 
-# /atualizar â€” Varredura e atualizaÃ§Ã£o de contexto
+# /atualizar — Varredura e atualização de contexto
 
-Compara o que estÃ¡ nos arquivos de contexto com o estado real do workspace e propÃµe atualizaÃ§Ãµes.
+Compara o que está nos arquivos de contexto com o estado real do workspace e propõe atualizações.
 
 ## Workflow
 
-### Passo 1 â€” Levantamento
+### Passo 1 — Levantamento
 
 Listar:
-- Pastas na raiz (cada uma representa uma Ã¡rea de trabalho)
-- Subpastas em `clientes/` (se existir) â€” cada uma Ã© um cliente
-- Skills em `.claude/skills/` â€” quais existem hoje
-- Arquivos recentes (Ãºltimos 30 dias) em pastas como `propostas/`, `conteudo/`, `clientes/<x>/`
+- Pastas na raiz (cada uma representa uma área de trabalho)
+- Subpastas em `clientes/` (se existir) — cada uma é um cliente
+- Skills em `.claude/skills/` — quais existem hoje
+- Arquivos recentes (últimos 30 dias) em pastas como `propostas/`, `conteudo/`, `clientes/<x>/`
 
-### Passo 2 â€” ComparaÃ§Ã£o
+### Passo 2 — Comparação
 
 Ler os arquivos de contexto e identificar:
 
-- **Em `_memoria/empresa.md`:** lista de clientes / serviÃ§os / ferramentas â€” bate com a realidade do workspace?
+- **Em `_memoria/empresa.md`:** lista de clientes / serviços / ferramentas — bate com a realidade do workspace?
 - **Em `_memoria/estrategia.md`:** o foco atual ainda faz sentido (datas, prioridades)?
-- **Em `CLAUDE.md`:** as regras de organizaÃ§Ã£o e a estrutura de pastas listada batem com o que existe?
-- **Em `identidade/design-guide.md`:** continua coerente com o que foi gerado nas Ãºltimas peÃ§as (carrossÃ©is, slides)?
+- **Em `CLAUDE.md`:** as regras de organização e a estrutura de pastas listada batem com o que existe?
+- **Em `identidade/design-guide.md`:** continua coerente com o que foi gerado nas últimas peças (carrosséis, slides)?
 
-### Passo 3 â€” Proposta de mudanÃ§as
+### Passo 3 — Proposta de mudanças
 
-Apresentar pro usuÃ¡rio uma lista curta no formato:
+Apresentar pro usuário uma lista curta no formato:
 
 ```
 Encontrei [N] coisas pra atualizar:
 
-1. _memoria/empresa.md â€” falta o cliente "Acme" (vi pasta clientes/Acme/ criada em [data])
-2. CLAUDE.md â€” tem regra "propostas vÃ£o em propostas/" mas vejo propostas em clientes/<x>/propostas/
-3. _memoria/estrategia.md â€” fala em "fechar 1Âº cliente em fevereiro", jÃ¡ Ã© abril e tem 3 clientes ativos
+1. _memoria/empresa.md — falta o cliente "Acme" (vi pasta clientes/Acme/ criada em [data])
+2. CLAUDE.md — tem regra "propostas vão em propostas/" mas vejo propostas em clientes/<x>/propostas/
+3. _memoria/estrategia.md — fala em "fechar 1º cliente em fevereiro", já é abril e tem 3 clientes ativos
 
-Quer que eu aplique essas mudanÃ§as? Posso aplicar todas, escolher algumas, ou nenhuma.
+Quer que eu aplique essas mudanças? Posso aplicar todas, escolher algumas, ou nenhuma.
 ```
 
-### Passo 4 â€” AplicaÃ§Ã£o
+### Passo 4 — Aplicação
 
-Se o usuÃ¡rio aprovar, editar os arquivos com cirurgia â€” sÃ³ a linha relevante, sem reformatar o documento todo. Mostrar o diff de cada mudanÃ§a aplicada.
+Se o usuário aprovar, editar os arquivos com cirurgia — só a linha relevante, sem reformatar o documento todo. Mostrar o diff de cada mudança aplicada.
 
 ## Regras
 
-- NÃ£o inventar fatos â€” sÃ³ registrar o que tem evidÃªncia no workspace
-- Se a evidÃªncia for ambÃ­gua (ex: pasta vazia chamada "Cliente Novo"), perguntar antes de adicionar
-- NÃ£o apagar conteÃºdo dos arquivos de contexto â€” sÃ³ atualizar e adicionar
-- Se nenhuma mudanÃ§a for necessÃ¡ria, responder "TÃ¡ tudo coerente, nada pra atualizar"
+- Não inventar fatos — só registrar o que tem evidência no workspace
+- Se a evidência for ambígua (ex: pasta vazia chamada "Cliente Novo"), perguntar antes de adicionar
+- Não apagar conteúdo dos arquivos de contexto — só atualizar e adicionar
+- Se nenhuma mudança for necessária, responder "Tá tudo coerente, nada pra atualizar"

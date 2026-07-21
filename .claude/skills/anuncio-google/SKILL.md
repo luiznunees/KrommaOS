@@ -1,174 +1,174 @@
-ï»¿---
+---
 name: anuncio-google
 description: >
   Cria estrutura completa de campanha do Google Ads a partir de um briefing ou da pesquisa SEO.
   Gera CSV pronto pra importar no Google Ads Editor com campanhas Search organizadas por cluster
-  de palavras-chave, grupos de anÃºncios, RSAs (Responsive Search Ads), extensÃµes e palavras-chave
-  negativas. LÃª o briefing de _memoria/empresa.md e da pesquisa SEO se existir.
-  Use quando o usuÃ¡rio pedir "criar campanha google ads", "anÃºncio google", "google ads",
+  de palavras-chave, grupos de anúncios, RSAs (Responsive Search Ads), extensões e palavras-chave
+  negativas. Lê o briefing de _memoria/empresa.md e da pesquisa SEO se existir.
+  Use quando o usuário pedir "criar campanha google ads", "anúncio google", "google ads",
   "csv pro google ads", ou /anuncio-google.
 ---
 
-# /anuncio-google â€” Estrutura de campanha Google Ads
+# /anuncio-google — Estrutura de campanha Google Ads
 
-Skill que monta a campanha inteira em CSV pronto pra importar no Google Ads Editor. Sai do briefing direto pro CSV â€” sem montar grupo por grupo na mÃ£o na interface do Google.
+Skill que monta a campanha inteira em CSV pronto pra importar no Google Ads Editor. Sai do briefing direto pro CSV — sem montar grupo por grupo na mão na interface do Google.
 
-## DependÃªncias
+## Dependências
 
-- **Contexto do negÃ³cio:** `_memoria/empresa.md` (produto/serviÃ§o, pÃºblico, regiÃ£o, diferenciais)
+- **Contexto do negócio:** `_memoria/empresa.md` (produto/serviço, público, região, diferenciais)
 - **Tom de voz:** `_memoria/preferencias.md`
-- **Pesquisa SEO (se existir):** `marketing/seo/01-pesquisa-demanda.md`, `06-google-ads.md` â€” usar como insumo
-- **Outputs vÃ£o em:** `marketing/campanhas/google-ads-<YYYY-MM-DD>/`
+- **Pesquisa SEO (se existir):** `marketing/seo/01-pesquisa-demanda.md`, `06-google-ads.md` — usar como insumo
+- **Outputs vão em:** `marketing/campanhas/google-ads-<YYYY-MM-DD>/`
 
 ---
 
 ## Workflow
 
-### Passo 1 â€” Briefing
+### Passo 1 — Briefing
 
-Se o usuÃ¡rio nÃ£o passou briefing, perguntar:
+Se o usuário não passou briefing, perguntar:
 
-1. **Produto/serviÃ§o a anunciar?** (1-3 linhas)
-2. **Quem Ã© o pÃºblico?** (perfil, dor que resolve)
-3. **RegiÃ£o:** raio em km a partir de qual cidade?
-4. **OrÃ§amento diÃ¡rio?** (R$/dia)
-5. **Objetivo:** ligaÃ§Ãµes / WhatsApp / formulÃ¡rio / visita?
+1. **Produto/serviço a anunciar?** (1-3 linhas)
+2. **Quem é o público?** (perfil, dor que resolve)
+3. **Região:** raio em km a partir de qual cidade?
+4. **Orçamento diário?** (R$/dia)
+5. **Objetivo:** ligações / WhatsApp / formulário / visita?
 6. **Site/landing page** existe? URL?
 
-Se jÃ¡ existe `marketing/seo/06-google-ads.md` (criado pelo `/seo`), usar como base â€” pular as perguntas que jÃ¡ foram respondidas lÃ¡.
+Se já existe `marketing/seo/06-google-ads.md` (criado pelo `/seo`), usar como base — pular as perguntas que já foram respondidas lá.
 
-### Passo 2 â€” Pesquisa de palavras-chave
+### Passo 2 — Pesquisa de palavras-chave
 
-Se jÃ¡ existe `marketing/seo/01-pesquisa-demanda.md`, usar o top 10-20 de termos prioritÃ¡rios (intenÃ§Ã£o transacional + comercial).
+Se já existe `marketing/seo/01-pesquisa-demanda.md`, usar o top 10-20 de termos prioritários (intenção transacional + comercial).
 
-Se nÃ£o existe, gerar:
+Se não existe, gerar:
 - 30-50 termos-semente baseados no briefing
-- WebSearch pra cada grupo: ver concorrÃªncia, sazonalidade
-- Filtrar pelos de **intenÃ§Ã£o comercial/transacional** (descartar informacionais)
+- WebSearch pra cada grupo: ver concorrência, sazonalidade
+- Filtrar pelos de **intenção comercial/transacional** (descartar informacionais)
 - Agrupar em **clusters** (ex: "feijoada-buffet", "feijoada-restaurante", "feijoada-evento")
 
-### Passo 3 â€” Estrutura de campanha
+### Passo 3 — Estrutura de campanha
 
-**PadrÃ£o recomendado pra B2B local:**
+**Padrão recomendado pra B2B local:**
 
 ```
-Campanha 1: <NegÃ³cio> â€” Search Geral
-â”œâ”€â”€ Grupo: <Cluster 1>
-â”‚   â”œâ”€â”€ 10-15 keywords (mix de exata, frase, ampla modificada)
-â”‚   â”œâ”€â”€ 3 RSAs (15 headlines + 4 descriptions cada)
-â”‚   â””â”€â”€ 10-15 keywords negativas no grupo
-â”œâ”€â”€ Grupo: <Cluster 2>
-â”‚   â””â”€â”€ ...
-â””â”€â”€ ... (1 grupo por cluster do Passo 2)
+Campanha 1: <Negócio> — Search Geral
++-- Grupo: <Cluster 1>
+¦   +-- 10-15 keywords (mix de exata, frase, ampla modificada)
+¦   +-- 3 RSAs (15 headlines + 4 descriptions cada)
+¦   +-- 10-15 keywords negativas no grupo
++-- Grupo: <Cluster 2>
+¦   +-- ...
++-- ... (1 grupo por cluster do Passo 2)
 
-Campanha 2: <NegÃ³cio> â€” Local (opcional)
-â”œâ”€â”€ AnÃºncios pra Google Maps
-â””â”€â”€ SegmentaÃ§Ã£o por proximidade
+Campanha 2: <Negócio> — Local (opcional)
++-- Anúncios pra Google Maps
++-- Segmentação por proximidade
 
-Lista de negativas globais: termos genÃ©ricos descartados, marcas concorrentes
+Lista de negativas globais: termos genéricos descartados, marcas concorrentes
 ```
 
-### Passo 4 â€” Copies (RSAs)
+### Passo 4 — Copies (RSAs)
 
 Pra cada grupo, gerar 3 RSAs (Responsive Search Ads):
 
-**15 headlines** por anÃºncio:
+**15 headlines** por anúncio:
 - 5 com keyword principal
-- 3 com diferenciais concretos (certificaÃ§Ãµes, prazo, garantia)
-- 3 com CTA ("Solicite cotaÃ§Ã£o", "PeÃ§a pelo WhatsApp", "Fale agora")
-- 2 com prova social (anos no mercado, nÃºmero de clientes)
-- 2 com proposta de valor genÃ©rica
+- 3 com diferenciais concretos (certificações, prazo, garantia)
+- 3 com CTA ("Solicite cotação", "Peça pelo WhatsApp", "Fale agora")
+- 2 com prova social (anos no mercado, número de clientes)
+- 2 com proposta de valor genérica
 
 **4 descriptions** (90 caracteres cada):
 - 1 institucional + CTA
-- 1 com diferencial tÃ©cnico + CTA
-- 1 com urgÃªncia/escassez (se aplicÃ¡vel)
+- 1 com diferencial técnico + CTA
+- 1 com urgência/escassez (se aplicável)
 - 1 com prova social + CTA
 
-**RestriÃ§Ãµes do Google:**
+**Restrições do Google:**
 - Headline: 30 caracteres
 - Description: 90 caracteres
-- Sem emojis, sem caps lock, sem repetiÃ§Ã£o de palavras
-- Sem afirmaÃ§Ãµes superlativas nÃ£o-comprovadas ("o melhor", "nÃºmero 1") sem fonte
+- Sem emojis, sem caps lock, sem repetição de palavras
+- Sem afirmações superlativas não-comprovadas ("o melhor", "número 1") sem fonte
 
 Seguir `_memoria/preferencias.md` pra tom.
 
-### Passo 5 â€” ExtensÃµes
+### Passo 5 — Extensões
 
-Gerar CSVs separados pra cada tipo de extensÃ£o:
+Gerar CSVs separados pra cada tipo de extensão:
 
-- **Sitelinks** (4-6): "Sobre nÃ³s", "CatÃ¡logo", "Cases", "WhatsApp", "LocalizaÃ§Ã£o"
+- **Sitelinks** (4-6): "Sobre nós", "Catálogo", "Cases", "WhatsApp", "Localização"
 - **Chamadas** (telefone): puxar de `_memoria/empresa.md`
-- **Snippets estruturados:** lista de serviÃ§os, categorias de produto
-- **PreÃ§o** (se aplicÃ¡vel): faixas de preÃ§o dos serviÃ§os principais
-- **PromoÃ§Ã£o** (se aplicÃ¡vel): desconto, condiÃ§Ã£o especial
+- **Snippets estruturados:** lista de serviços, categorias de produto
+- **Preço** (se aplicável): faixas de preço dos serviços principais
+- **Promoção** (se aplicável): desconto, condição especial
 
-### Passo 6 â€” ConfiguraÃ§Ãµes da campanha
+### Passo 6 — Configurações da campanha
 
 Gerar arquivo `configuracoes.md` com:
 
-- **EstratÃ©gia de lance:** "Maximizar conversÃµes" pra comeÃ§ar (depois migrar pra "Maximizar conversÃµes com tCPA" quando tiver 30+ conversÃµes)
-- **OrÃ§amento diÃ¡rio:** conforme briefing
-- **SegmentaÃ§Ã£o geogrÃ¡fica:** raio em km a partir do endereÃ§o
-- **Idioma:** PortuguÃªs
+- **Estratégia de lance:** "Maximizar conversões" pra começar (depois migrar pra "Maximizar conversões com tCPA" quando tiver 30+ conversões)
+- **Orçamento diário:** conforme briefing
+- **Segmentação geográfica:** raio em km a partir do endereço
+- **Idioma:** Português
 - **Dispositivos:** ajustes de lance recomendados (mobile +0%, desktop +0%, tablet -20%)
-- **ProgramaÃ§Ã£o:** dias e horÃ¡rios conforme negÃ³cio
-- **ConversÃµes a configurar:** clique no WhatsApp, envio de formulÃ¡rio, ligaÃ§Ã£o telefÃ´nica, tempo no site
+- **Programação:** dias e horários conforme negócio
+- **Conversões a configurar:** clique no WhatsApp, envio de formulário, ligação telefônica, tempo no site
 
-### Passo 7 â€” Gerar os CSVs
+### Passo 7 — Gerar os CSVs
 
 Estrutura de pastas final:
 
 ```
 marketing/campanhas/google-ads-<YYYY-MM-DD>/
-  campanhas.csv          â† linha por campanha
-  grupos.csv             â† linha por grupo de anÃºncio
-  keywords.csv           â† keywords + match type
-  keywords-negativas.csv â† negativas por grupo + lista global
-  anuncios.csv           â† RSAs (headlines + descriptions)
+  campanhas.csv          ? linha por campanha
+  grupos.csv             ? linha por grupo de anúncio
+  keywords.csv           ? keywords + match type
+  keywords-negativas.csv ? negativas por grupo + lista global
+  anuncios.csv           ? RSAs (headlines + descriptions)
   extensoes-sitelinks.csv
   extensoes-chamadas.csv
   extensoes-snippets.csv
-  extensoes-preco.csv (se aplicÃ¡vel)
-  configuracoes.md       â† config + checklist de import
-  README.md              â† passo a passo pra importar no Google Ads Editor
+  extensoes-preco.csv (se aplicável)
+  configuracoes.md       ? config + checklist de import
+  README.md              ? passo a passo pra importar no Google Ads Editor
 ```
 
-**Formato dos CSVs:** seguir o padrÃ£o de importaÃ§Ã£o do Google Ads Editor (colunas: Campaign, Ad group, Keyword, Match type, Status, Max CPC, etc.).
+**Formato dos CSVs:** seguir o padrão de importação do Google Ads Editor (colunas: Campaign, Ad group, Keyword, Match type, Status, Max CPC, etc.).
 
-### Passo 8 â€” Resumo + prÃ³ximos passos
+### Passo 8 — Resumo + próximos passos
 
-Mostrar pro usuÃ¡rio:
+Mostrar pro usuário:
 
 ```
-âœ“ Campanha pronta: marketing/campanhas/google-ads-<YYYY-MM-DD>/
+? Campanha pronta: marketing/campanhas/google-ads-<YYYY-MM-DD>/
 
 Estrutura:
 - <N> campanhas
-- <N> grupos de anÃºncio
+- <N> grupos de anúncio
 - <N> palavras-chave (positivas)
 - <N> palavras-chave negativas
 - <N> RSAs
 
 Pra subir:
 1. Abrir Google Ads Editor (desktop)
-2. Conta â†’ Importar â†’ CSV
-3. Subir campanhas.csv primeiro, depois grupos, keywords, anÃºncios, extensÃµes
-4. Revisar status (tudo "pausado" inicialmente â€” ativar manualmente)
-5. Conferir conversÃµes configuradas no Google Tag Manager
+2. Conta ? Importar ? CSV
+3. Subir campanhas.csv primeiro, depois grupos, keywords, anúncios, extensões
+4. Revisar status (tudo "pausado" inicialmente — ativar manualmente)
+5. Conferir conversões configuradas no Google Tag Manager
 6. Ativar campanha quando estiver tudo OK
 
-SugestÃ£o de orÃ§amento inicial: R$<X>/dia por <Y> dias antes de avaliar.
+Sugestão de orçamento inicial: R$<X>/dia por <Y> dias antes de avaliar.
 ```
 
 ---
 
 ## Regras
 
-- **Nunca inventar dados de CPC.** Se o cliente perguntar quanto vai custar, falar que depende da concorrÃªncia real e dar uma faixa baseada em WebSearch.
-- **Sempre comeÃ§ar pausado.** Cliente revisa, ativa quando aprovar.
-- **NÃ£o anunciar pra termos informacionais.** "Como fazer X" raramente converte â€” deixar pra SEO orgÃ¢nico.
-- **Match type:** comeÃ§ar com Phrase Match na maioria. Exact pra termos premium. Broad sÃ³ com dados consistentes.
-- **Lista de negativas global** Ã© obrigatÃ³ria â€” sem ela, queima dinheiro em buscas irrelevantes.
-- **ConversÃµes antes de tudo.** Sem conversÃ£o configurada, o Google nÃ£o otimiza â€” relatar isso e pedir setup antes de ativar.
-- Copies seguem `_memoria/preferencias.md` estritamente. Sem jargÃ£o de marketing se o pÃºblico nÃ£o usa.
+- **Nunca inventar dados de CPC.** Se o cliente perguntar quanto vai custar, falar que depende da concorrência real e dar uma faixa baseada em WebSearch.
+- **Sempre começar pausado.** Cliente revisa, ativa quando aprovar.
+- **Não anunciar pra termos informacionais.** "Como fazer X" raramente converte — deixar pra SEO orgânico.
+- **Match type:** começar com Phrase Match na maioria. Exact pra termos premium. Broad só com dados consistentes.
+- **Lista de negativas global** é obrigatória — sem ela, queima dinheiro em buscas irrelevantes.
+- **Conversões antes de tudo.** Sem conversão configurada, o Google não otimiza — relatar isso e pedir setup antes de ativar.
+- Copies seguem `_memoria/preferencias.md` estritamente. Sem jargão de marketing se o público não usa.

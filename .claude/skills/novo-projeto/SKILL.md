@@ -1,48 +1,48 @@
-ï»¿---
+---
 name: novo-projeto
 description: >
   Cria uma pasta de projeto nova com `CLAUDE.md` dedicado, depois de uma entrevista curta sobre
-  o projeto (cliente, objetivo, entregas previstas). Use quando o usuÃ¡rio disser "novo projeto",
-  "novo cliente", "/novo-projeto", "comeÃ§ar projeto pra X" ou pedir pra estruturar um trabalho novo.
+  o projeto (cliente, objetivo, entregas previstas). Use quando o usuário disser "novo projeto",
+  "novo cliente", "/novo-projeto", "começar projeto pra X" ou pedir pra estruturar um trabalho novo.
 ---
 
-# /novo-projeto â€” Pasta de projeto novo com contexto dedicado
+# /novo-projeto — Pasta de projeto novo com contexto dedicado
 
-Quando o usuÃ¡rio comeÃ§a um projeto novo (cliente, iniciativa, produto), cria uma pasta com `CLAUDE.md` prÃ³prio que herda contexto da raiz e adiciona o que Ã© especÃ­fico do projeto.
+Quando o usuário começa um projeto novo (cliente, iniciativa, produto), cria uma pasta com `CLAUDE.md` próprio que herda contexto da raiz e adiciona o que é específico do projeto.
 
 ## Workflow
 
-### Passo 1 â€” Entrevista (4 perguntas)
+### Passo 1 — Entrevista (4 perguntas)
 
 1. "Qual o nome do projeto ou cliente?"
-2. "Ã‰ um cliente novo, projeto interno ou iniciativa pessoal?"
+2. "É um cliente novo, projeto interno ou iniciativa pessoal?"
 3. "Qual o objetivo principal? (uma frase)"
-4. "Que tipo de entrega vai ter? (ex: ads, site, conteÃºdo, automaÃ§Ã£o, proposta â€” pode ser mais de uma)"
+4. "Que tipo de entrega vai ter? (ex: ads, site, conteúdo, automação, proposta — pode ser mais de uma)"
 
-### Passo 2 â€” Decidir local
+### Passo 2 — Decidir local
 
 Baseado na resposta 2:
 
-- **Cliente novo:** criar em `clientes/<Nome>/` (ou na pasta equivalente do perfil â€” ler `CLAUDE.md` da raiz pra confirmar a convenÃ§Ã£o)
-- **Projeto interno:** criar em `projetos/<nome>/` (criar `projetos/` se nÃ£o existir)
-- **Iniciativa pessoal:** perguntar onde o usuÃ¡rio prefere
+- **Cliente novo:** criar em `clientes/<Nome>/` (ou na pasta equivalente do perfil — ler `CLAUDE.md` da raiz pra confirmar a convenção)
+- **Projeto interno:** criar em `projetos/<nome>/` (criar `projetos/` se não existir)
+- **Iniciativa pessoal:** perguntar onde o usuário prefere
 
-### Passo 3 â€” Estrutura bÃ¡sica
+### Passo 3 — Estrutura básica
 
 Criar a pasta com:
 
-- `CLAUDE.md` do projeto (instruÃ§Ãµes herdadas + especÃ­ficas)
+- `CLAUDE.md` do projeto (instruções herdadas + específicas)
 - `briefing.md` (com o que foi coletado na entrevista)
-- Subpastas conforme as entregas mencionadas (ex: se mencionou "ads e conteÃºdo", criar `ads/` e `conteudo/`)
+- Subpastas conforme as entregas mencionadas (ex: se mencionou "ads e conteúdo", criar `ads/` e `conteudo/`)
 
-### Passo 4 â€” ConteÃºdo do `CLAUDE.md` do projeto
+### Passo 4 — Conteúdo do `CLAUDE.md` do projeto
 
 Template:
 
 ```markdown
 # [Nome do projeto]
 
-> Projeto criado em [data]. Pasta dedicada â€” instruÃ§Ãµes aqui sobrescrevem as da raiz quando relevantes.
+> Projeto criado em [data]. Pasta dedicada — instruções aqui sobrescrevem as da raiz quando relevantes.
 
 ## Sobre
 
@@ -65,28 +65,28 @@ Template:
 
 ## Contexto que herda da raiz
 
-Esse projeto herda automaticamente o tom de voz, marca e contexto do negÃ³cio definidos em `_memoria/` e `identidade/` da raiz. NÃ£o duplicar essas informaÃ§Ãµes aqui.
+Esse projeto herda automaticamente o tom de voz, marca e contexto do negócio definidos em `_memoria/` e `identidade/` da raiz. Não duplicar essas informações aqui.
 
-## EspecÃ­fico desse projeto
+## Específico desse projeto
 
-[Vazio â€” preencher com regras que valem sÃ³ pra esse projeto, conforme for descobrindo]
+[Vazio — preencher com regras que valem só pra esse projeto, conforme for descobrindo]
 ```
 
-### Passo 5 â€” Resumo
+### Passo 5 — Resumo
 
-Responder pro usuÃ¡rio:
+Responder pro usuário:
 
 ```
 Pasta criada: [caminho]
-âœ“ CLAUDE.md do projeto
-âœ“ briefing.md
-âœ“ Subpastas: [lista]
+? CLAUDE.md do projeto
+? briefing.md
+? Subpastas: [lista]
 
-Quando for trabalhar nesse projeto, abre o terminal jÃ¡ dentro da pasta â€” assim eu carrego o CLAUDE.md especÃ­fico junto com o da raiz.
+Quando for trabalhar nesse projeto, abre o terminal já dentro da pasta — assim eu carrego o CLAUDE.md específico junto com o da raiz.
 ```
 
 ## Regras
 
-- Nome de pasta: usar o nome como o usuÃ¡rio falou, sem normalizar agressivamente (manter acentos, espaÃ§os viram hÃ­fen, mas o nome reconhecÃ­vel)
-- NÃ£o criar subpastas que nÃ£o foram pedidas ("pra organizar melhor"). SÃ³ o que foi mencionado nas entregas
-- Se o cliente/projeto jÃ¡ existe (pasta com mesmo nome), avisar e perguntar se Ã© pra adicionar dentro ou criar com sufixo
+- Nome de pasta: usar o nome como o usuário falou, sem normalizar agressivamente (manter acentos, espaços viram hífen, mas o nome reconhecível)
+- Não criar subpastas que não foram pedidas ("pra organizar melhor"). Só o que foi mencionado nas entregas
+- Se o cliente/projeto já existe (pasta com mesmo nome), avisar e perguntar se é pra adicionar dentro ou criar com sufixo

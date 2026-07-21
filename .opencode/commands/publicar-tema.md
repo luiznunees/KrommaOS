@@ -1,0 +1,1 @@
+Use the skill "publicar-tema" to run the full content pipeline. Pick a topic, do quick SEO research, write a blog post (draft), create a summary carousel using the carrossel skill, and generate 3 caption versions.

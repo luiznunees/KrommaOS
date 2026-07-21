@@ -1,87 +1,87 @@
-ï»¿---
+---
 name: analisar-dados
 description: >
   Analisa um arquivo de dados (CSV, Excel, TXT, JSON) e gera um resumo executivo
-  com os principais insights, tendÃªncias e recomendaÃ§Ãµes.
-  Use quando o usuÃ¡rio disser "analisa esse arquivo", "o que mostram esses dados",
-  "resume esses resultados", "analisa esse relatÃ³rio", ou arrastar um arquivo de dados.
+  com os principais insights, tendências e recomendações.
+  Use quando o usuário disser "analisa esse arquivo", "o que mostram esses dados",
+  "resume esses resultados", "analisa esse relatório", ou arrastar um arquivo de dados.
 ---
 
-# /analisar-dados â€” AnÃ¡lise de Arquivo
+# /analisar-dados — Análise de Arquivo
 
-## DependÃªncias
+## Dependências
 
-- **Contexto do negÃ³cio:** `_memoria/empresa.md` (pra entender o que os dados representam)
+- **Contexto do negócio:** `_memoria/empresa.md` (pra entender o que os dados representam)
 - **Tom de voz:** `_memoria/preferencias.md`
 
 ---
 
 ## Workflow
 
-### Passo 1 â€” Entender o contexto
+### Passo 1 — Entender o contexto
 
-Antes de analisar, perguntar se nÃ£o estiver claro:
-- "O que Ã© esse arquivo? (vendas, anÃºncios, mÃ©tricas, respostas de pesquisa...)"
-- "Qual Ã© a pergunta principal que vocÃª quer responder com esses dados?"
+Antes de analisar, perguntar se não estiver claro:
+- "O que é esse arquivo? (vendas, anúncios, métricas, respostas de pesquisa...)"
+- "Qual é a pergunta principal que você quer responder com esses dados?"
 
-Se o contexto estiver Ã³bvio pelo nome do arquivo ou pelo conteÃºdo, prossegue sem perguntar.
+Se o contexto estiver óbvio pelo nome do arquivo ou pelo conteúdo, prossegue sem perguntar.
 
-### Passo 2 â€” Ler o arquivo
+### Passo 2 — Ler o arquivo
 
-Ler o arquivo fornecido. Se for Excel (.xlsx), ler com as ferramentas disponÃ­veis pra extrair o conteÃºdo das cÃ©lulas.
+Ler o arquivo fornecido. Se for Excel (.xlsx), ler com as ferramentas disponíveis pra extrair o conteúdo das células.
 
-### Passo 3 â€” AnÃ¡lise
+### Passo 3 — Análise
 
 Identificar e reportar:
 
-**O que estÃ¡ bom:**
-- MÃ©tricas acima da mÃ©dia ou em crescimento
-- PadrÃµes positivos nos dados
-- Top performers (produtos, campanhas, perÃ­odos, etc)
+**O que está bom:**
+- Métricas acima da média ou em crescimento
+- Padrões positivos nos dados
+- Top performers (produtos, campanhas, períodos, etc)
 
 **O que preocupa:**
-- Quedas, anomalias ou tendÃªncias negativas
-- O que estÃ¡ abaixo do esperado
-- Gargalos ou desperdÃ­cios visÃ­veis
+- Quedas, anomalias ou tendências negativas
+- O que está abaixo do esperado
+- Gargalos ou desperdícios visíveis
 
-**ComparaÃ§Ãµes:**
-- PerÃ­odo atual vs perÃ­odo anterior (se houver)
+**Comparações:**
+- Período atual vs período anterior (se houver)
 - Top vs bottom performers
-- DistribuiÃ§Ã£o entre categorias
+- Distribuição entre categorias
 
-**Insights nÃ£o Ã³bvios:**
-- CorrelaÃ§Ãµes interessantes
-- PadrÃµes que nÃ£o aparecem na leitura superficial
+**Insights não óbvios:**
+- Correlações interessantes
+- Padrões que não aparecem na leitura superficial
 
-### Passo 4 â€” Output
+### Passo 4 — Output
 
-Gerar um resumo executivo em prosa (nÃ£o sÃ³ bullet points):
+Gerar um resumo executivo em prosa (não só bullet points):
 
 ```markdown
-# AnÃ¡lise â€” [Nome do Arquivo/RelatÃ³rio]
-*[Data da anÃ¡lise]*
+# Análise — [Nome do Arquivo/Relatório]
+*[Data da análise]*
 
 ## O que esses dados mostram
-[2-3 parÃ¡grafos com o panorama geral]
+[2-3 parágrafos com o panorama geral]
 
-## O que estÃ¡ funcionando
+## O que está funcionando
 [lista com contexto]
 
-## O que merece atenÃ§Ã£o
+## O que merece atenção
 [lista com contexto]
 
-## 3 recomendaÃ§Ãµes
-1. [aÃ§Ã£o concreta]
-2. [aÃ§Ã£o concreta]
-3. [aÃ§Ã£o concreta]
+## 3 recomendações
+1. [ação concreta]
+2. [ação concreta]
+3. [ação concreta]
 
-## NÃºmeros-chave
-| MÃ©trica | Valor | Contexto |
+## Números-chave
+| Métrica | Valor | Contexto |
 |---------|-------|---------|
 | ... | ... | ... |
 ```
 
-Salvar em `estudos/analise-[nome]-[data].md` ou na pasta mais adequada pro perfil do usuÃ¡rio.
+Salvar em `estudos/analise-[nome]-[data].md` ou na pasta mais adequada pro perfil do usuário.
 
 Perguntar se quer exportar o resumo em HTML pra compartilhar ou apresentar.
 
@@ -89,7 +89,7 @@ Perguntar se quer exportar o resumo em HTML pra compartilhar ou apresentar.
 
 ## Regras
 
-- AnÃ¡lise em prosa, nÃ£o sÃ³ listas â€” o usuÃ¡rio deve poder ler e entender sem abrir o arquivo original
-- Nunca inventar dados que nÃ£o estÃ£o no arquivo
+- Análise em prosa, não só listas — o usuário deve poder ler e entender sem abrir o arquivo original
+- Nunca inventar dados que não estão no arquivo
 - Se os dados estiverem incompletos ou com problemas, mencionar antes de analisar
 - Tom conforme `_memoria/preferencias.md`

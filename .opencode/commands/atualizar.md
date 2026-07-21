@@ -1,0 +1,1 @@
+Use the skill "atualizar" to scan the project and update context files (_memoria/empresa.md, preferencias.md, estrategia.md, AGENTS.md, identidade/design-guide.md) that are out of sync with the actual workspace state.

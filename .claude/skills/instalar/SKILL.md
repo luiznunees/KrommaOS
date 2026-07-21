@@ -1,167 +1,167 @@
-ï»¿---
+---
 name: instalar
 description: >
-  Instala o MazyOS no negÃ³cio do usuÃ¡rio. Entrevista sobre empresa, tom de voz,
+  Instala o KrommaOS no negócio do usuário. Entrevista sobre empresa, tom de voz,
   foco atual e identidade visual, e preenche `_memoria/empresa.md`, `_memoria/preferencias.md`,
   `_memoria/estrategia.md`, `identidade/design-guide.md` e adapta o `CLAUDE.md` conforme o perfil.
-  Use quando o usuÃ¡rio acabou de clonar o repositÃ³rio e quer instalar o sistema, ou quando
-  pedir explicitamente "rodar /instalar", "instalar o MazyOS", "primeiro setup".
+  Use quando o usuário acabou de clonar o repositório e quer instalar o sistema, ou quando
+  pedir explicitamente "rodar /instalar", "instalar o KrommaOS", "primeiro setup".
 ---
 
-# /instalar â€” InstalaÃ§Ã£o inicial do MazyOS
+# /instalar — Instalação inicial do KrommaOS
 
-Esse Ã© o primeiro comando que o usuÃ¡rio roda depois de clonar o repositÃ³rio. NÃ£o pode falhar e nÃ£o pode soar burocrÃ¡tico. Trata como conversa de descoberta â€” pergunta uma coisa por vez, escuta de verdade, nÃ£o enfileira tudo. O objetivo Ã© o sistema sair daqui sabendo quem Ã© a empresa, como ela fala, e onde tÃ¡ o atrito do dia a dia.
+Esse é o primeiro comando que o usuário roda depois de clonar o repositório. Não pode falhar e não pode soar burocrático. Trata como conversa de descoberta — pergunta uma coisa por vez, escuta de verdade, não enfileira tudo. O objetivo é o sistema sair daqui sabendo quem é a empresa, como ela fala, e onde tá o atrito do dia a dia.
 
-## PrÃ©-checagem
+## Pré-checagem
 
 ### 1. Nome da pasta
 
-Conferir o nome da pasta atual (`basename "$(pwd)"`). Se for `mazyos`, `MazyOS`, `MazyOS-main`, `mazyos-main` ou variaÃ§Ã£o genÃ©rica:
+Conferir o nome da pasta atual (`basename "$(pwd)"`). Se for `KrommaOS`, `KrommaOS`, `KrommaOS-main`, `KrommaOS-main` ou variação genérica:
 
-> "Notei que a pasta atual ainda tem nome genÃ©rico ('<nome-atual>'). O ideal Ã© a pasta ter o nome do seu negÃ³cio, nÃ£o 'MazyOS'. Quando terminarmos o setup, te lembro de renomear (Ã© rÃ¡pido â€” fechar VS Code, renomear a pasta no Finder/Explorer, abrir de novo). Bora seguir?"
+> "Notei que a pasta atual ainda tem nome genérico ('<nome-atual>'). O ideal é a pasta ter o nome do seu negócio, não 'KrommaOS'. Quando terminarmos o setup, te lembro de renomear (é rápido — fechar VS Code, renomear a pasta no Finder/Explorer, abrir de novo). Bora seguir?"
 
 Registrar mentalmente o nome atual pra usar na Fase 5.
 
 ### 2. Arquivos de contexto
 
-Conferir se algum arquivo de memÃ³ria jÃ¡ estÃ¡ preenchido (nÃ£o Ã© placeholder):
+Conferir se algum arquivo de memória já está preenchido (não é placeholder):
 - `_memoria/empresa.md`
 - `_memoria/preferencias.md`
 - `_memoria/estrategia.md`
 - `identidade/design-guide.md`
 
-Se algum jÃ¡ tiver conteÃºdo real, perguntar:
-> "JÃ¡ tem algum contexto preenchido aqui. Quer que eu sobrescreva (recomeÃ§ar do zero) ou complemente o que falta?"
+Se algum já tiver conteúdo real, perguntar:
+> "Já tem algum contexto preenchido aqui. Quer que eu sobrescreva (recomeçar do zero) ou complemente o que falta?"
 
 Se for setup limpo, seguir direto.
 
 ---
 
-## Fase 1 â€” Escolha do perfil
+## Fase 1 — Escolha do perfil
 
-Perguntar qual perfil mais combina com o negÃ³cio:
+Perguntar qual perfil mais combina com o negócio:
 
-1. **Solopreneur / criador solo** â€” uma pessoa sÃ³, mistura de marca pessoal e negÃ³cio
-2. **Freelancer** â€” atende clientes, organiza por projeto/cliente
-3. **AgÃªncia / consultoria** â€” equipe pequena entregando pra vÃ¡rios clientes
-4. **Empresa** â€” empresa estabelecida com setores (marketing, comercial, financeiro, etc.)
+1. **Solopreneur / criador solo** — uma pessoa só, mistura de marca pessoal e negócio
+2. **Freelancer** — atende clientes, organiza por projeto/cliente
+3. **Agência / consultoria** — equipe pequena entregando pra vários clientes
+4. **Empresa** — empresa estabelecida com setores (marketing, comercial, financeiro, etc.)
 
 A resposta determina qual template de `CLAUDE.md` aplicar (ver `templates/perfis/`).
 
 ---
 
-## Fase 2 â€” Entrevista
+## Fase 2 — Entrevista
 
-Fazer essas perguntas em ordem, esperando a resposta de cada uma antes de seguir. Se vier resposta vaga, repetir uma vez pedindo concretude. NÃ£o insistir mais que isso â€” registrar o que vier.
+Fazer essas perguntas em ordem, esperando a resposta de cada uma antes de seguir. Se vier resposta vaga, repetir uma vez pedindo concretude. Não insistir mais que isso — registrar o que vier.
 
-**Sobre o negÃ³cio:**
-1. "Como vocÃª chama o que vocÃª faz? (nome da empresa, ou seu nome se for marca pessoal)"
-2. "O que sua empresa entrega, em uma frase do jeito que vocÃª falaria pro vizinho?"
-3. "Quem te paga? (perfil de cliente real â€” descreve em uma ou duas frases, sem persona genÃ©rica)"
-4. "VocÃª toca sozinho ou tem equipe? Se tem, quantos e cada um fazendo o quÃª?"
+**Sobre o negócio:**
+1. "Como você chama o que você faz? (nome da empresa, ou seu nome se for marca pessoal)"
+2. "O que sua empresa entrega, em uma frase do jeito que você falaria pro vizinho?"
+3. "Quem te paga? (perfil de cliente real — descreve em uma ou duas frases, sem persona genérica)"
+4. "Você toca sozinho ou tem equipe? Se tem, quantos e cada um fazendo o quê?"
 
 **Sobre voz:**
-5. "Me cola um exemplo da tua escrita â€” uma legenda do Insta, um email pra cliente, qualquer coisa real e recente. Assim eu calibro o jeito de escrever sem precisar adivinhar."
-6. "O que te dÃ¡ ranÃ§o quando alguÃ©m escreve assim? (ex: 'vamos juntos!', emoji em email formal, 'caro cliente', jargÃ£o de guru, 'alavancar', 'sinergia')"
+5. "Me cola um exemplo da tua escrita — uma legenda do Insta, um email pra cliente, qualquer coisa real e recente. Assim eu calibro o jeito de escrever sem precisar adivinhar."
+6. "O que te dá ranço quando alguém escreve assim? (ex: 'vamos juntos!', emoji em email formal, 'caro cliente', jargão de guru, 'alavancar', 'sinergia')"
 
 **Sobre foco:**
-7. "Qual o gargalo do teu negÃ³cio hoje? O que tÃ¡ segurando ele de crescer?"
-8. "Se eu pudesse tirar UMA coisa que vocÃª repete toda semana das tuas costas, qual seria?"
+7. "Qual o gargalo do teu negócio hoje? O que tá segurando ele de crescer?"
+8. "Se eu pudesse tirar UMA coisa que você repete toda semana das tuas costas, qual seria?"
 
 **Sobre identidade visual:**
-9. "Tem identidade visual definida ou tÃ¡ no zero? Se tem, me passa as cores principais e a fonte."
+9. "Tem identidade visual definida ou tá no zero? Se tem, me passa as cores principais e a fonte."
 10. "Tem logo? Se sim, joga o arquivo em `identidade/logo.png` (ou `.svg`) e me confirma."
 
 ---
 
-## Fase 3 â€” Preenchimento dos arquivos
+## Fase 3 — Preenchimento dos arquivos
 
 ### `_memoria/empresa.md`
-Preencher com base nas perguntas 1-4. Manter formato simples â€” nome, o que faz, perfil de cliente, equipe.
+Preencher com base nas perguntas 1-4. Manter formato simples — nome, o que faz, perfil de cliente, equipe.
 
 ### `_memoria/preferencias.md`
 Preencher com base nas perguntas 5-6. Estrutura:
-- **Tom de voz:** derivar do exemplo de escrita real da pergunta 5 (descrever em 2-3 frases o jeito de escrever, com referÃªncia ao exemplo)
+- **Tom de voz:** derivar do exemplo de escrita real da pergunta 5 (descrever em 2-3 frases o jeito de escrever, com referência ao exemplo)
 - **O que evitar:** lista direta da resposta 6
-- **Estilo geral:** sÃ­ntese do que combina e o que destoa
+- **Estilo geral:** síntese do que combina e o que destoa
 
 ### `_memoria/estrategia.md`
 Preencher com base nas perguntas 7-8. Estrutura:
 - **Gargalo atual:** [resposta da 7]
-- **Pra tirar das costas:** [resposta da 8] â€” registrar como candidata a virar skill via `/mapear-rotinas`
-- **PrÃ³ximas prioridades:** derivar do gargalo (o que ataca o gargalo direto)
+- **Pra tirar das costas:** [resposta da 8] — registrar como candidata a virar skill via `/mapear-rotinas`
+- **Próximas prioridades:** derivar do gargalo (o que ataca o gargalo direto)
 
 ### `identidade/design-guide.md`
-Se o usuÃ¡rio forneceu cores/fontes/logo (perguntas 9-10), preencher os campos correspondentes. Se nÃ£o, deixar como estÃ¡ e avisar:
-> "Deixei o `identidade/design-guide.md` em branco. Sempre que vocÃª definir uma identidade visual, edita lÃ¡ â€” as skills de carrossel, proposta e slide leem esse arquivo antes de criar qualquer visual."
+Se o usuário forneceu cores/fontes/logo (perguntas 9-10), preencher os campos correspondentes. Se não, deixar como está e avisar:
+> "Deixei o `identidade/design-guide.md` em branco. Sempre que você definir uma identidade visual, edita lá — as skills de carrossel, proposta e slide leem esse arquivo antes de criar qualquer visual."
 
 ### `CLAUDE.md`
-Pegar o template correspondente ao perfil escolhido na Fase 1 (`templates/perfis/claude-md-<perfil>.md`), adaptar com o nome do negÃ³cio e estrutura de pastas mencionada nas respostas, e sobrescrever o `CLAUDE.md` da raiz.
+Pegar o template correspondente ao perfil escolhido na Fase 1 (`templates/perfis/claude-md-<perfil>.md`), adaptar com o nome do negócio e estrutura de pastas mencionada nas respostas, e sobrescrever o `CLAUDE.md` da raiz.
 
 ---
 
-## Fase 4 â€” Resumo
+## Fase 4 — Resumo
 
-Mostrar pro usuÃ¡rio o que foi configurado:
+Mostrar pro usuário o que foi configurado:
 
 ```
-âœ“ Perfil aplicado: [perfil]
-âœ“ Contexto do negÃ³cio: _memoria/empresa.md
-âœ“ Tom de voz: _memoria/preferencias.md
-âœ“ Foco atual: _memoria/estrategia.md
-âœ“ Marca: identidade/design-guide.md  [preenchida | em branco â€” preencher depois]
-âœ“ CLAUDE.md adaptado pro perfil [perfil]
+? Perfil aplicado: [perfil]
+? Contexto do negócio: _memoria/empresa.md
+? Tom de voz: _memoria/preferencias.md
+? Foco atual: _memoria/estrategia.md
+? Marca: identidade/design-guide.md  [preenchida | em branco — preencher depois]
+? CLAUDE.md adaptado pro perfil [perfil]
 ```
 
 ---
 
-## Fase 5 â€” Renomear pasta (se necessÃ¡rio)
+## Fase 5 — Renomear pasta (se necessário)
 
-Se a pasta atual ainda tem nome genÃ©rico (detectado na PrÃ©-checagem), gerar slug do nome da empresa (resposta da pergunta 1):
-- minÃºsculas
+Se a pasta atual ainda tem nome genérico (detectado na Pré-checagem), gerar slug do nome da empresa (resposta da pergunta 1):
+- minúsculas
 - sem acentos
-- espaÃ§os viram hÃ­fen
+- espaços viram hífen
 - caracteres especiais removidos
 
-Ex: "Acme Empresa Ltda" â†’ `acme-empresa-ltda`
+Ex: "Acme Empresa Ltda" ? `acme-empresa-ltda`
 
 Mostrar:
 
-> "Ãšltima coisa: a pasta ainda tÃ¡ com nome genÃ©rico ('<nome-atual>').
-> Pra ter cara do seu negÃ³cio, recomendo renomear pra '<slug>'.
+> "Última coisa: a pasta ainda tá com nome genérico ('<nome-atual>').
+> Pra ter cara do seu negócio, recomendo renomear pra '<slug>'.
 >
 > Como fazer:
 > 1. Fecha o VS Code
-> 2. Renomeia a pasta no Finder (Mac) ou Explorer (Windows) â€” ou no
+> 2. Renomeia a pasta no Finder (Mac) ou Explorer (Windows) — ou no
 >    terminal fora dela: `mv <nome-atual> <slug>`
 > 3. Abre o VS Code de novo na pasta renomeada
 >
-> Se preferir outro nome, me fala que eu ajusto a sugestÃ£o."
+> Se preferir outro nome, me fala que eu ajusto a sugestão."
 
-Se a pasta jÃ¡ tem nome prÃ³prio (nÃ£o genÃ©rico), pular essa fase.
+Se a pasta já tem nome próprio (não genérico), pular essa fase.
 
 ---
 
-## Fase 6 â€” PrÃ³ximos passos
+## Fase 6 — Próximos passos
 
-> "Pronto. O MazyOS jÃ¡ te conhece.
+> "Pronto. O KrommaOS já te conhece.
 >
-> No comeÃ§o de cada sessÃ£o de trabalho, roda `/abrir` â€” eu carrego tudo
+> No começo de cada sessão de trabalho, roda `/abrir` — eu carrego tudo
 > que combinamos aqui antes da primeira frase. Quando quiser fazer um
-> carrossel, plano de SEO, campanha ou qualquer outra coisa, Ã© sÃ³
+> carrossel, plano de SEO, campanha ou qualquer outra coisa, é só
 > chamar a skill que cabe.
 >
-> VocÃª mencionou que repete '<resposta da pergunta 8>' toda semana.
+> Você mencionou que repete '<resposta da pergunta 8>' toda semana.
 > Quando quiser tirar isso das costas de vez, roda `/mapear-rotinas`
-> que eu transformo em skill prÃ³pria."
+> que eu transformo em skill própria."
 
-Se o usuÃ¡rio quiser publicar o trabalho no GitHub, mencionar `/salvar`.
+Se o usuário quiser publicar o trabalho no GitHub, mencionar `/salvar`.
 
 ---
 
 ## Regras
 
-- NÃ£o inventar dados â€” se a resposta for vaga, registrar do jeito que veio (ou deixar placeholder claro)
-- NÃ£o escrever "este arquivo serÃ¡ preenchido pelo /instalar" nos arquivos finais â€” esse aviso sÃ³ existe nos placeholders, sai depois do /instalar
-- O setup deve durar 5-7 minutos no mÃ¡ximo. Se o usuÃ¡rio estiver enrolando numa pergunta, registra o que tem e segue
-- NÃ£o fazer perguntas extras alÃ©m das listadas acima sem motivo claro
+- Não inventar dados — se a resposta for vaga, registrar do jeito que veio (ou deixar placeholder claro)
+- Não escrever "este arquivo será preenchido pelo /instalar" nos arquivos finais — esse aviso só existe nos placeholders, sai depois do /instalar
+- O setup deve durar 5-7 minutos no máximo. Se o usuário estiver enrolando numa pergunta, registra o que tem e segue
+- Não fazer perguntas extras além das listadas acima sem motivo claro

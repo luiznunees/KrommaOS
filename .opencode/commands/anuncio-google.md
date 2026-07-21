@@ -1,0 +1,1 @@
+Use the skill "anuncio-google" to create a complete Google Ads campaign structure. Follow the full workflow: briefing, keyword research, campaign structure, ad copies, extensions, settings, CSV generation, and summary.

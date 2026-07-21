@@ -1,0 +1,1 @@
+Use the skill "relatorio-ads" to generate a weekly Google Ads and Meta Ads report. Read exported CSV files, compare with previous week, generate executive summary per channel, alerts, and recommendations.

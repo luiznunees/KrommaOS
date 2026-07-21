@@ -1,0 +1,1 @@
+Use the skill "seo" to run a complete SEO + GEO + Google Ads workflow. Follow all 8 steps: demand research, competition analysis, GMB optimization, on-page, content strategy, Google Ads, monitoring, and GEO optimization.

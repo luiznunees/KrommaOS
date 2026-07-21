@@ -1,0 +1,1 @@
+Use the skill "carrossel" to create a carousel or visual post. Read identidade/design-guide.md first. Plan, write text, generate photos (optional), create HTML+PNG slides, save to marketing/conteudo/, and generate captions.

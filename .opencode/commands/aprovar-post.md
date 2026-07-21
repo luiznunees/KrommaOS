@@ -1,0 +1,1 @@
+Use the skill "aprovar-post" to approve and publish a post from the queue. Flip blog from draft to published, copy carousel PNGs, commit and push, wait for deploy, and post to Instagram and Facebook via Meta API.
