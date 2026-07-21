@@ -53,6 +53,12 @@ Antes de executar qualquer tarefa, verificar se existe skill relevante em `.clau
 - `go` — Executa múltiplas tarefas em sequência ou paralelo
 - `regras` — Gerencia regras de negócio (CLAs)
 
+### Agência / Serviço para clientes
+- `briefing` — Captura briefing de cliente (entrevista estruturada)
+- `proposta` — Gera proposta comercial com 3 opções de investimento
+- `criar-site` — Cria e publica site completo para cliente
+- `cliente-status` — Painel de todos os clientes ativos
+
 ### Conteúdo e Marketing
 - `carrossel` — Carrosséis e posts visuais
 - `publicar-tema` — Pipeline de conteúdo SEO + redes sociais
