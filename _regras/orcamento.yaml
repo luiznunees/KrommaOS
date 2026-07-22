@@ -4,9 +4,13 @@ regras:
     severidade: "obrigatória"
 
   - escopo: "propostas e orçamentos"
-    regra: "Sempre incluir 3 opções: básica, profissional, premium"
+    regra: "Formato padrão do Método Kromma: Setup (R$ 3.000–6.000) + Mensalidade (R$ 500–1.000). Consultar _contexto/oferta.md para valores exatos."
     severidade: "obrigatória"
 
   - escopo: "propostas e orçamentos"
-    regra: "Justificar cada opção com o que o cliente ganha"
+    regra: "Justificar o setup com o trabalho pesado inicial (diagnóstico, implantação) e a mensalidade com a operação contínua"
     severidade: "recomendada"
+
+  - escopo: "propostas e orçamentos"
+    regra: "Setup alto filtra cliente sério — não reduzir pra 'facilitar entrada'. O valor é âncora de qualidade."
+    severidade: "obrigatória"

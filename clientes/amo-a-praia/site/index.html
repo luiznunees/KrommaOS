@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amo a Praia Imóveis — Os imóveis mais incríveis de Xangri-Lá</title>
+  <meta name="description" content="Imóveis de alto padrão em condomínios fechados em Xangri-Lá e litoral norte do RS. Casas e sobrados de luxo à venda.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="progress-bar" aria-hidden="true"></div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><img src="img/logo.webp" alt="Amo a Praia Imóveis"></a>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="imoveis.html">Imóveis</a>
+        <a href="condominios.html">Condomínios</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <a href="contato.html" class="header-cta">Fale conosco</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+    <div class="container hero-content" id="hero-content">
+      <span class="hero-tag"><span class="dot"></span> Alto padrao em Xangri-La</span>
+      <h1>O imovel dos seus sonhos te espera</h1>
+      <p>Casas e sobrados de luxo nos melhores condominios fechados do litoral norte do Rio Grande do Sul.</p>
+      <a href="imoveis.html" class="hero-cta">Ver imoveis disponiveis</a>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>300+</strong>Imoveis vendidos</div>
+        <div class="hero-stat"><strong>50+</strong>Condominios parceiros</div>
+        <div class="hero-stat"><strong>15+</strong>Anos de mercado</div>
+      </div>
+      <div class="search-bar">
+        <select>
+          <option>Todos os condominios</option>
+          <option>Amare Home Resort</option>
+          <option>Enseada Lagos</option>
+          <option>Condado de Capao</option>
+          <option>Velas da Marina</option>
+          <option>Playa Vista</option>
+          <option>Sense</option>
+        </select>
+        <select>
+          <option>Ate R$ 3 milhoes</option>
+          <option>R$ 3M a R$ 5M</option>
+          <option>R$ 5M a R$ 10M</option>
+          <option>Acima de R$ 10M</option>
+        </select>
+        <button onclick="window.location.href='imoveis.html'">Buscar</button>
+      </div>
+      <div style="margin-top:12px;">
+        <a href="imoveis.html" style="font-size:13px;color:rgba(255,255,255,0.6);">Ver todos os imoveis</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal">
+      <span class="section-label">Destaques</span>
+      <h2 class="section-title">Algumas novidades a venda</h2>
+      <p class="section-sub">Propriedades selecionadas nos melhores condominios da regiao</p>
+      <div class="properties-grid">
+        <div class="property-card">
+          <div class="property-card-img" style="background:#d4c8b8;">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+            <span class="property-card-tag">Destaque</span>
+          </div>
+          <div class="property-card-body">
+            <h3>Casa em Condominio</h3>
+            <p class="location">Riviera, Xangri-La</p>
+            <div class="property-card-features">
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20M22 8v12M6 8v4h12V8"/></svg> 4 suites</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M3 3v18h18"/></svg> 218m2</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18h14a2 2 0 002-2v-3l-2-5H5l-2 5v3a2 2 0 002 2z"/><circle cx="7" cy="14" r="2"/><circle cx="17" cy="14" r="2"/></svg> 2 vagas</span>
+            </div>
+            <div class="property-card-price">R$ 2.900.000</div>
+            <a href="imovel.html?id=1" class="property-card-link">Ver detalhes</a>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-card-img" style="background:#c8d4c8;">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+            <span class="property-card-tag">Oportunidade</span>
+          </div>
+          <div class="property-card-body">
+            <h3>Sobrado — Condominio Enseada</h3>
+            <p class="location">Enseada Lagos, Xangri-La</p>
+            <div class="property-card-features">
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20M22 8v12M6 8v4h12V8"/></svg> 6 suites</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M3 3v18h18"/></svg> 484m2</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18h14a2 2 0 002-2v-3l-2-5H5l-2 5v3a2 2 0 002 2z"/><circle cx="7" cy="14" r="2"/><circle cx="17" cy="14" r="2"/></svg> 2 vagas</span>
+            </div>
+            <div class="property-card-price">R$ 9.900.000</div>
+            <a href="imovel.html?id=2" class="property-card-link">Ver detalhes</a>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-card-img" style="background:#d4d4c8;">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+          </div>
+          <div class="property-card-body">
+            <h3>Sobrado — Velas da Marina</h3>
+            <p class="location">Velas da Marina, Capao da Canoa</p>
+            <div class="property-card-features">
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20M22 8v12M6 8v4h12V8"/></svg> 4 suites</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M3 3v18h18"/></svg> 320m2</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18h14a2 2 0 002-2v-3l-2-5H5l-2 5v3a2 2 0 002 2z"/><circle cx="7" cy="14" r="2"/><circle cx="17" cy="14" r="2"/></svg> 1 vaga</span>
+            </div>
+            <div class="property-card-price">R$ 3.990.000</div>
+            <a href="imovel.html?id=3" class="property-card-link">Ver detalhes</a>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-card-img" style="background:#c8d4d4;">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+            <span class="property-card-tag">Beira Lago</span>
+          </div>
+          <div class="property-card-body">
+            <h3>Casa Beira Lago — Amare</h3>
+            <p class="location">Amare Home Resort, Xangri-La</p>
+            <div class="property-card-features">
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20M22 8v12M6 8v4h12V8"/></svg> 5 suites</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M3 3v18h18"/></svg> 365m2</span>
+              <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18h14a2 2 0 002-2v-3l-2-5H5l-2 5v3a2 2 0 002 2z"/><circle cx="7" cy="14" r="2"/><circle cx="17" cy="14" r="2"/></svg> 4 vagas</span>
+            </div>
+            <div class="property-card-price">R$ 6.500.000</div>
+            <a href="imovel.html?id=4" class="property-card-link">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#f5f5f7;">
+    <div class="container reveal">
+      <span class="section-label">Condominios</span>
+      <h2 class="section-title">Conheca os melhores condominios do litoral norte</h2>
+      <p class="section-sub">Estrutura, seguranca e qualidade de vida para sua familia</p>
+      <div class="condo-grid">
+        <div class="condo-card" onclick="window.location.href='condominios.html'">
+          <div class="condo-card-img" style="background:#d4c8b8;">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M4 10l4-4 4 4v8H4v-8z"/><path d="M8 6V4h2v2"/><path d="M16 10l-2-2M16 10v6h4v-6l-2-2"/></svg>
+          </div>
+          <div class="condo-card-body">
+            <h3>Amare Home Resort</h3>
+            <p>Xangri-La</p>
+          </div>
+        </div>
+        <div class="condo-card" onclick="window.location.href='condominios.html'">
+          <div class="condo-card-img" style="background:#c8d4c8;">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M4 10l4-4 4 4v8H4v-8z"/><path d="M8 6V4h2v2"/><path d="M16 10l-2-2M16 10v6h4v-6l-2-2"/></svg>
+          </div>
+          <div class="condo-card-body">
+            <h3>Enseada Lagos</h3>
+            <p>Xangri-La</p>
+          </div>
+        </div>
+        <div class="condo-card" onclick="window.location.href='condominios.html'">
+          <div class="condo-card-img" style="background:#d4d4c8;">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M4 10l4-4 4 4v8H4v-8z"/><path d="M8 6V4h2v2"/><path d="M16 10l-2-2M16 10v6h4v-6l-2-2"/></svg>
+          </div>
+          <div class="condo-card-body">
+            <h3>Condado de Capao</h3>
+            <p>Capao da Canoa</p>
+          </div>
+        </div>
+        <div class="condo-card" onclick="window.location.href='condominios.html'">
+          <div class="condo-card-img" style="background:#c8d4d4;">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M4 10l4-4 4 4v8H4v-8z"/><path d="M8 6V4h2v2"/><path d="M16 10l-2-2M16 10v6h4v-6l-2-2"/></svg>
+          </div>
+          <div class="condo-card-body">
+            <h3>Playa Vista</h3>
+            <p>Xangri-La</p>
+          </div>
+        </div>
+        <div class="condo-card" onclick="window.location.href='condominios.html'">
+          <div class="condo-card-img" style="background:#d4c8c8;">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M4 10l4-4 4 4v8H4v-8z"/><path d="M8 6V4h2v2"/><path d="M16 10l-2-2M16 10v6h4v-6l-2-2"/></svg>
+          </div>
+          <div class="condo-card-body">
+            <h3>Sense</h3>
+            <p>Xangri-La</p>
+          </div>
+        </div>
+        <div class="condo-card" onclick="window.location.href='condominios.html'">
+          <div class="condo-card-img" style="background:#c8c8d4;">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M4 10l4-4 4 4v8H4v-8z"/><path d="M8 6V4h2v2"/><path d="M16 10l-2-2M16 10v6h4v-6l-2-2"/></svg>
+          </div>
+          <div class="condo-card-body">
+            <h3>Velas da Marina</h3>
+            <p>Capao da Canoa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container reveal">
+      <div style="text-align:center;">
+        <span class="section-label">Por que escolher</span>
+        <h2 class="section-title">Por que a Amo a Praia?</h2>
+        <p class="section-sub" style="margin:0 auto 48px;">Mais de 15 anos conectando pessoas aos melhores imoveis do litoral norte</p>
+      </div>
+      <div class="diffs-grid">
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4a2 2 0 01-2-2V5a2 2 0 012-2h2"/><path d="M18 9h2a2 2 0 002-2V5a2 2 0 00-2-2h-2"/><path d="M6 3h12v6a6 6 0 01-12 0V3z"/><path d="M12 15v6M9 21h6"/></svg>
+          </div>
+          <h3>Curadoria exclusiva</h3>
+          <p>So trabalhamos com imoveis selecionados nos melhores condominios da regiao.</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s-8-5.5-8-10a8 8 0 0116 0c0 4.5-8 10-8 10z"/><circle cx="12" cy="8" r="3"/><path d="M5 5l14 14"/></svg>
+          </div>
+          <h3>Atendimento personalizado</h3>
+          <p>Da visita a escritura, acompanhamos cada etapa com transparencia.</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg>
+          </div>
+          <h3>Conhecimento local</h3>
+          <p>Conhecemos Xangri-La e o litoral norte como ninguem — cada condominio, cada detalhe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner-anuncie">
+    <div class="banner-anuncie-bg"></div>
+    <div class="container banner-anuncie-inner">
+      <div class="banner-anuncie-content reveal-left">
+        <span class="banner-anuncie-tag">Anuncie conosco</span>
+        <h2>Tem um imovel para vender ou alugar?</h2>
+        <p>Divulgue seu imovel na Amo a Praia e alcance compradores qualificados. Cuidamos de todo o processo com transparencia e agilidade.</p>
+        <a href="contato.html" class="banner-anuncie-cta">Quero anunciar</a>
+      </div>
+      <div class="banner-anuncie-visual reveal-right">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        <div class="banner-anuncie-badge">+50</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1440,40 L1440,80 L0,80 Z" fill="#f5f5f7"/></svg>
+  </div>
+
+  <section class="section youtube-section">
+    <div class="container reveal">
+      <div style="text-align:center;">
+        <span class="section-accent" style="margin:0 auto;"></span>
+        <span class="section-label">YouTube</span>
+        <h2 class="section-title" style="text-align:center;">Acompanhe no YouTube</h2>
+        <p class="section-sub" style="margin:0 auto var(--space-xl);text-align:center;">Casas, condominios e o melhor do litoral norte em video</p>
+      </div>
+      <div class="youtube-grid">
+        <div class="youtube-card">
+          <div class="youtube-card-video">
+            <iframe src="https://www.youtube.com/embed/VPKSWSfiGn0" title="Cyano Private Resort" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="youtube-card-body">
+            <h3>Cyano Private Resort Atlantida Sul</h3>
+            <p>Condominio fechado frente ao mar com terrenos no litoral gaucho.</p>
+          </div>
+        </div>
+        <div class="youtube-card">
+          <div class="youtube-card-video">
+            <iframe src="https://www.youtube.com/embed/Cw7QQ6oezcs" title="Las Dunas Xangri-La" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="youtube-card-body">
+            <h3>Las Dunas Xangri-La</h3>
+            <p>Condominio fechado beira-mar com acesso direto a praia, casas e terrenos.</p>
+          </div>
+        </div>
+        <div class="youtube-card">
+          <a href="https://www.youtube.com/@AmoaPraia" target="_blank" rel="noopener noreferrer" class="youtube-card-all">
+            <div class="youtube-card-all-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z"/></svg>
+            </div>
+            <h3>Veja todos os videos</h3>
+            <p>Acesse o canal @AmoaPraia no YouTube</p>
+            <span class="youtube-sub-count">1,64K inscritos</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section">
+    <div class="container about-grid">
+      <div class="about-content reveal-left">
+        <span class="section-label">Quem somos</span>
+        <h2>Realizando sonhos no litoral norte</h2>
+        <p>A Amo a Praia Imoveis nasceu da paixao por Xangri-La e seus condominios. Somos especialistas em imoveis de alto padrao, ajudando familias a encontrar o lar perfeito no litoral norte do Rio Grande do Sul.</p>
+        <p>Com mais de uma decada de experiencia, construimos relacoes de confianca com nossos clientes — da primeira visita a entrega das chaves.</p>
+        <div class="about-numbers">
+          <div class="about-num">
+            <div class="about-num-value">15+</div>
+            <div class="about-num-label">Anos de mercado</div>
+          </div>
+          <div class="about-num">
+            <div class="about-num-value">300+</div>
+            <div class="about-num-label">Imoveis vendidos</div>
+          </div>
+          <div class="about-num">
+            <div class="about-num-value">50+</div>
+            <div class="about-num-label">Condominios parceiros</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image-wrapper reveal-right">
+        <div class="overlay"></div>
+        <div style="background:#e0e1e1;height:400px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="#6e6e73" stroke-width="1.5"><path d="M3 21h18V3H3v18z"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="season-banner">
+    <div class="season-banner-waves" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,40 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="rgba(0,163,166,0.06)"/></svg>
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C240,0 480,120 720,40 C960,0 1200,80 1440,50 L1440,120 L0,120 Z" fill="rgba(0,163,166,0.04)"/></svg>
+    </div>
+    <div class="container season-banner-inner">
+      <div class="season-badge">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        Temporada de Verao 2026
+      </div>
+      <p>Encontre o imovel perfeito para curtir o litoral norte do RS</p>
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <h2>Quer encontrar o imovel perfeito?</h2>
+    <p>Agende uma visita ou tire duvidas com nossa equipe.</p>
+    <a href="contato.html" class="btn">Fale conosco</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Amo a <span>Praia</span> Moveis</h3>
+        <p>Os imoveis mais incriveis de Xangri-La e litoral norte do RS.</p>
+        <p style="font-size:13px;">CRECI 50375</p>
+      </div>
+      <div>
+        <h4>Navegacao</h4>
+        <a href="index.html">Inicio</a>
+        <a href="imoveis.html">Imoveis</a>
+        <a href="condominios.html">Condominios</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="tel:+5551997501482">(51) 99750-1482</a>
+        <a href="tel:+5551999121843">(51) 99912-1843</a>
+        <a href="mailto:simamoapraia@gmail.com">simamoapraia@gmail.com</a>
+      </div>
+      <div>
+        <h4>Endereco</h4>
+        <p style="font-size:14px;">Av. Paraguassu, 1910<br>Xangri-La, RS<br>CEP: 95588-000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      (c) 2026 Amo a Praia Imoveis — BCG Negocios Imobiliarios LTDA. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <button class="whatsapp-float" aria-label="Fale pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <span class="whatsapp-tooltip">Fale conosco no WhatsApp</span>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

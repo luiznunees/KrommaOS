@@ -1,115 +1,72 @@
-# KrommaOS — Sistema operacional do negócio
+# KrommaIA — KrommaOS
 
-Sua empresa roda em cima desse arquivo. Aqui ficam as regras de operação
-do KrommaOS — como o Claude lê o contexto, aprende com correções, mantém
-tudo atualizado e cria skills novas conforme a operação evolui.
+> Molde do CLAUDE.md aplicado a **agência** — equipe pequena entregando
+> pra múltiplos clientes ao mesmo tempo. O sistema gira em torno de
+> proposta, atendimento e produção em paralelo.
 
-Esse arquivo é editável. Quando o `/instalar` rodar, ele complementa o
-final dessa página com as regras específicas do seu negócio.
+## O que é esse workspace
 
----
+Operação da agência KrommaIA. Aqui ficam todos os clientes, propostas, conteúdo e entregas.
 
-## Contexto do negócio
+**Estrutura de pastas:**
+- `_memoria/` — quem é a agência, como falamos, foco atual
+- `_contexto/` — oferta, ICP, posicionamento comercial
+- `_regras/` — regras de negócio (CLAs)
+- `identidade/` — marca da agência (aplicada nas peças internas)
+- `clientes/` — uma subpasta por cliente, autossuficiente, com contexto isolado
+- `briefings/` — briefings e roteiros de reunião antes de virar cliente
+- `propostas/` — propostas em andamento
+- `marketing/` — conteúdo institucional da agência
+- `saidas/` — documentos pontuais, análises
+- `dados/` — arquivos a analisar (relatórios de cliente, exports)
 
-No início de toda conversa, ler os seguintes arquivos (quando existirem
-e estiverem preenchidos):
+## Sobre a agência
 
-1. `_memoria/empresa.md` — quem é o usuário, o que faz, como funciona o negócio
-2. `_memoria/preferencias.md` — tom de voz, estilo de escrita, o que evitar
-3. `_memoria/estrategia.md` — foco atual, prioridades, prazos
+**Método Kromma** — metodologia de diagnóstico e implementação de presença digital para empresas locais.
+Atendemos empresas locais de porte médio: clínicas, imobiliárias, concessionárias, academias, escritórios de advocacia/contabilidade, lojas físicas. Nossos serviços principais:
 
-Usar essas informações como base pra qualquer resposta ou decisão. Ao
-sugerir prioridades, formatos ou abordagens, considerar o foco atual
-descrito em `estrategia.md`.
+- Diagnóstico de presença digital (GMB, site, reviews, redes, concorrência)
+- Implantação/otimização de Google Meu Negócio
+- Conteúdo recorrente (carrossel + blog + legendas amarradas)
+- Gestão de anúncios (Google/Meta — upsell)
+- Criação de sites
 
-Pra qualquer tarefa visual (carrossel, post, landing page), consultar
-`identidade/design-guide.md` como referência de estilo.
+**Formato:** Setup (R$ 3k–6k) + Mensalidade (R$ 500–1k)
+**Diferencial:** Visita presencial + diagnóstico real + motor interno de IA que acelera a entrega
 
-Não é necessário listar o que foi lido nem confirmar a leitura. Apenas
-usar o contexto naturalmente.
+Time: Founder solo (Luis Nunes).
 
----
+## Clientes ativos
 
-## Fluxo de trabalho
+- **Amo a Praia Moveis** — imobiliária em Xangri-La/RS. Site em desenvolvimento, próximo da publicação.
 
-Antes de executar qualquer tarefa, verificar se existe skill relevante
-em `.claude/skills/`. Se encontrar, seguir as instruções da skill. Se
-não encontrar, executar a tarefa normalmente.
+## O que mais produzimos aqui
 
-Ao concluir uma tarefa que não tinha skill mas parece repetível (o
-usuário provavelmente vai pedir de novo no futuro), perguntar:
+- Propostas comerciais pra novos clientes
+- Sites e sistemas
+- Fluxos de prospecção e vendas
 
-> "Isso pode virar uma skill pra próxima vez. Quer que eu crie?"
+## Tom de voz
 
-Não perguntar pra tarefas pontuais ou perguntas simples. Só quando o
-padrão de repetição for claro.
+*Pendente — aguardando exemplo de escrita do founder.*
 
----
+Evitar: listas com traços no estilo ChatGPT genérico.
 
-## Aprender com correções
+## Regras do sistema
 
-Quando o usuário corrigir algo, melhorar uma resposta ou dar uma
-instrução que parece permanente (frases como "na verdade é assim", "não
-faça mais isso", "prefiro assim", "sempre que...", "evita...", "da
-próxima vez..."), perguntar:
+- Cliente novo → rodar `/novo-cliente` (skill de onboarding: pesquisa → diagnóstico → briefing de reunião → extração de dores → escopo)
+- Se o cliente já foi onboarding, a pasta `clientes/<Nome>/` tem `contexto.md` com todo o histórico
+- Proposta nova → `propostas/<cliente>-<data>.md` (ou .html) antes de fechar
+- Casos de sucesso ficam em `clientes/<Nome>/caso.md` (reuso em pitches)
+- Sempre consultar `_contexto/oferta.md` para decisões comerciais (preços, upsell, downsell)
 
-> "Quer que eu salve isso pra não precisar repetir?"
+## Ferramentas conectadas
 
-Se sim, identificar onde faz mais sentido salvar:
+- [ ] Notion
+- [ ] Gmail
+- [ ] Google Calendar
+- [ ] Canva
+- [ ] Meta Ads
+- [ ] Google Ads
 
-- **Sobre o negócio** (clientes, serviços, mercado) → `_memoria/empresa.md`
-- **Sobre preferências e estilo** (tom de voz, formato, o que evitar) → `_memoria/preferencias.md`
-- **Sobre prioridades e foco** (projetos, metas, prazos) → `_memoria/estrategia.md`
-- **Regra de comportamento nessa pasta** → próprio `CLAUDE.md`
-
-Salvar com uma linha nova clara, sem reformatar o arquivo inteiro.
-Confirmar mostrando a linha adicionada.
-
-Não perguntar se a correção for óbvia de contexto imediato (ex: "na
-verdade o arquivo se chama X"). Só perguntar quando a informação tiver
-valor duradouro.
-
----
-
-## Manter contexto atualizado
-
-Ao terminar uma tarefa que mudou algo relevante (cliente novo, skill
-nova, mudança de foco, processo novo, ferramenta instalada, estrutura
-alterada), perguntar:
-
-> "Isso mudou algo no teu contexto. Quer que eu atualize a memória?"
-
-Se sim, identificar o que atualizar:
-
-- **Cliente, serviço, ferramenta, equipe** → `_memoria/empresa.md`
-- **Mudança de prioridade ou foco** → `_memoria/estrategia.md`
-- **Tom ou estilo** → `_memoria/preferencias.md`
-- **Pasta, regra de organização, skill criada** → `CLAUDE.md`
-- **Visual (cores, fontes, logo)** → `identidade/design-guide.md`
-
-Mostrar o que vai mudar antes de salvar. Não reformatar o arquivo
-inteiro, só adicionar ou editar a linha relevante.
-
-**Quando NÃO perguntar:**
-- Tarefas pontuais sem impacto no contexto (escrever um email avulso, criar um post)
-- Perguntas simples ou conversas sem ação
-- Mudanças já salvas pelo bloco "Aprender com correções"
-
-**Dica:** rode `/atualizar` pra uma varredura completa quando houver dúvida.
-
----
-
-## Criação de skills
-
-Quando o usuário pedir skill nova:
-
-1. Verificar se existe template relevante em `templates/skills/`. Se
-   existir, usar como base e adaptar pro contexto
-2. Perguntar se é específica desse projeto ou útil em qualquer:
-   - Específica → `.claude/skills/nome-da-skill/SKILL.md` (local)
-   - Universal → `~/.claude/skills/nome-da-skill/SKILL.md` (global)
-3. Ler `_memoria/empresa.md` e `_memoria/preferencias.md` pra calibrar
-   o conteúdo da skill ao contexto do negócio
-4. Se a skill precisar de arquivos de apoio (templates, exemplos),
-   criar dentro da pasta da skill
-5. Seguir o fluxo da skill-creator nativa do Claude Code
+*(Marcar conforme for instalando os MCPs)*

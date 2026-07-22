@@ -28,6 +28,7 @@ No início de toda conversa, ler os seguintes arquivos (quando existirem e estiv
 1. `_memoria/empresa.md` — quem é o usuário, o que faz, como funciona o negócio
 2. `_memoria/preferencias.md` — tom de voz, estilo de escrita, o que evitar
 3. `_memoria/estrategia.md` — foco atual, prioridades, prazos
+4. `_contexto/oferta.md` — modelo de negócio, formato comercial, ICP, upsell/downsell
 
 Usar essas informações como base pra qualquer resposta ou decisão. Para qualquer tarefa visual (carrossel, post, landing page), consultar `identidade/design-guide.md` como referência de estilo. Não é necessário listar o que foi lido nem confirmar a leitura.
 
@@ -41,7 +42,7 @@ Antes de responder qualquer pergunta, ler os arquivos em `_regras/*.yaml`. As re
 
 ## Skills
 
-Antes de executar qualquer tarefa, verificar se existe skill relevante em `.claude/skills/` usando a ferramenta `skill`. Skills disponíveis (23 no total):
+Antes de executar qualquer tarefa, verificar se existe skill relevante em `.claude/skills/` usando a ferramenta `skill`. Skills disponíveis (25 no total):
 
 ### Núcleo
 - `instalar` — Instalação inicial do KrommaOS
@@ -49,6 +50,7 @@ Antes de executar qualquer tarefa, verificar se existe skill relevante em `.clau
 - `atualizar` — Varredura e atualização de contexto
 - `salvar` — Salvar no GitHub
 - `novo-projeto` — Pasta de projeto novo com contexto dedicado
+- `novo-cliente` — Onboarding completo de cliente (pesquisa, diagnóstico, reunião, escopo)
 - `mapear-rotinas` — Mapeamento de tarefas repetitivas em skills
 - `go` — Executa múltiplas tarefas em sequência ou paralelo
 - `regras` — Gerencia regras de negócio (CLAs)
@@ -98,6 +100,7 @@ Quando o usuário disser "/instalar", "/abrir", "/carrossel" ou qualquer "/coman
 Quando o usuário corrigir algo ou der uma instrução permanente (ex: "na verdade é assim", "prefiro assim", "evita..."), perguntar: "Quer que eu salve isso pra não precisar repetir?"
 
 - Sobre o negócio → `_memoria/empresa.md`
+- Sobre o modelo de venda e oferta → `_contexto/oferta.md`
 - Sobre preferências → `_memoria/preferencias.md`
 - Sobre prioridades → `_memoria/estrategia.md`
 - Regras de comportamento → `AGENTS.md`
@@ -131,15 +134,24 @@ Quando o usuário pedir skill nova:
 
 ```
 KrommaOS/
-  .claude/skills/        Skills (23 skills)
+  .claude/skills/        Skills (25 skills)
   .opencode/commands/    Comandos customizados (Ctrl+K)
   .opencode/agents/      Agentes especialistas (@analista, @redator, etc)
   _memoria/              Cérebro do negócio
+  _contexto/             Oferta, ICP, posicionamento comercial
   _regras/               CLAs — regras de negócio (YAML)
   identidade/            Identidade visual
+  clientes/              Contexto de cada cliente (isolado)
+  propostas/             Propostas comerciais
+  briefings/             Briefings e roteiros de reunião
   marketing/             Saídas de marketing
   scripts/               Scripts utilitários
   templates/             Templates e catálogos
   dados/                 Drop zone para arquivos
-  saidas/                Outputs gerais
+    saidas/              Outputs gerais
+```
+
+---
+
+> Contexto do perfil de agência em `CLAUDE.md` — ler como referência adicional.
 ```
